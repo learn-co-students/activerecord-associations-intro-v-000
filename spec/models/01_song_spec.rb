@@ -3,7 +3,7 @@ describe 'Song' do
     @song = Song.create(name: "Forever")
   end
 
-  after do 
+  after do
     clean_database
   end
 
