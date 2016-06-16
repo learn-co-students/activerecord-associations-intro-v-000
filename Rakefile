@@ -6,10 +6,12 @@ task :environment do
 end
 
 namespace :db do
+  desc "Migrate the db"
   task :migrate => :environment do
     migrate_db
   end
 
+  desc "Drop the db"
   task :drop => :environment do 
     drop_db
   end
