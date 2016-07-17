@@ -40,7 +40,7 @@ We'll go through both of these steps together, using our Playlister domain model
 
 ## Overview
 
-In this walk-through, we'll build building out a domain model for our fictitious music playing app, Playlister. This app will catalogue songs and their associated artists and genres.  
+In this walk-through, we'll be building out a domain model for our fictitious music playing app, Playlister. This app will catalogue songs and their associated artists and genres.  
 
 We'll have three models: Artists, Songs, and Genres. By writing a few migrations and making use of the appropriate ActiveRecord macros (more on that later), we will be able to:
 
@@ -73,7 +73,7 @@ We can see that the songs table will have an `artist_id` column and a `genre_id`
 
 Let's write the migration that will make this happen. 
 
-* Create a file, `db/migrations/001_create_song_table.rb`
+* Open a file, `db/migrate/01_create_songs.rb`
 * Write the following migration:
 
 ```ruby
@@ -99,7 +99,7 @@ Let's take a look at what our artists table will need to look like:
 |---|-------------|
 |1  |Taylor Swift |
 
-Our artists table just needs a `name` column. Let's write the migration. In `db/migrate/002_create_artists_table.rb`:
+Our artists table just needs a `name` column. Let's write the migration. In `db/migrate/02_create_artists.rb`:
 
 ```ruby
 class CreateArtists < ActiveRecord::Migration
@@ -121,7 +121,7 @@ Let's take a look at what our genres table will need to look like:
 |---|-----|
 |1  |pop  |
 
-Let's write our migration. In `db/migrate/003_create_genres_table.rb`:
+Let's write our migration. In `db/migrate/03_create_genres.rb`:
 
 ```ruby
 class CreateGenres < ActiveRecord::Migration
@@ -344,21 +344,4 @@ Let's play around with some genres and our has many through association.
 
 It's working!
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/activerecord-associations-intro'>ActiveRecord Associations</a> on Learn.co and start learning to code for free.</p>
