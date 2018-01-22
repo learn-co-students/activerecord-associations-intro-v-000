@@ -13,7 +13,15 @@
 ActiveRecord::Schema.define(version: 4) do
 
   create_table "artists", force: :cascade do |t|
+<<<<<<< HEAD
     t.string "CreateArtists"
+=======
+    t.string "name"
+  end
+
+  create_table "genres", force: :cascade do |t|
+    t.string "name"
+>>>>>>> bb9abe5d044456eb9e837e660af7a8009f094a46
   end
 
   create_table "songs", force: :cascade do |t|
