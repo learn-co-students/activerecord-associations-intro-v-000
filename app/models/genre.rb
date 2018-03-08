@@ -1,7 +1,4 @@
 class Genre < ActiveRecord::Base
-  def change
-    create_table :genres do |t|
-      t.string :name 
-    end
-  end
+  has_many :songs
+  has_many :artists, through: :songs
 end
