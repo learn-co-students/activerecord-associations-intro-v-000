@@ -1,2 +1,8 @@
-class CreateGenres < ActiveRecord::Migration[4.2]
-end
+class CreateGenres < ActiveRecord::Migration[5.1]
+
+  def change
+    create_table :genres do |t|
+      t.string :name
+    end #create_table
+  end #change
+end #class CreateGenres
