@@ -73,11 +73,11 @@ We can see that the songs table will have an `artist_id` column and a `genre_id`
 
 Let's write the migration that will make this happen. 
 
-* Open a file, `db/migrate/01_create_songs.rb`
+* Open a file, `db/migrate/03_create_songs.rb`
 * Write the following migration:
 
 ```ruby
-class CreateSongs < ActiveRecord::Migration
+class CreateSongs < ActiveRecord::Migration[4.2]
   def change
     create_table :songs do |t|
       t.string :name 
@@ -99,10 +99,10 @@ Let's take a look at what our artists table will need to look like:
 |---|-------------|
 |1  |Taylor Swift |
 
-Our artists table just needs a `name` column. Let's write the migration. In `db/migrate/02_create_artists.rb`:
+Our artists table just needs a `name` column. Let's write the migration. In `db/migrate/01_create_artists.rb`:
 
 ```ruby
-class CreateArtists < ActiveRecord::Migration
+class CreateArtists < ActiveRecord::Migration[4.2]
   def change
     create_table :artists do |t|
       t.string :name
@@ -121,10 +121,10 @@ Let's take a look at what our genres table will need to look like:
 |---|-----|
 |1  |pop  |
 
-Let's write our migration. In `db/migrate/03_create_genres.rb`:
+Let's write our migration. In `db/migrate/02_create_genres.rb`:
 
 ```ruby
-class CreateGenres < ActiveRecord::Migration
+class CreateGenres < ActiveRecord::Migration[4.2]
   def change
     create_table :genres do |t|
       t.string :name 
@@ -344,4 +344,14 @@ Let's play around with some genres and our has many through association.
 
 It's working!
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/activerecord-associations-intro'>ActiveRecord Associations</a> on Learn.co and start learning to code for free.</p>
+## Video Reviews
+
+* [ActiveRecord Associations](https://www.youtube.com/watch?v=5dqPYRsQd10) 
+
+* [ActiveRecord Associations II](https://www.youtube.com/watch?v=l9JCzNN2Z2U) 
+
+* [Aliasing ActiveRecord Associations](https://www.youtube.com/watch?v=WVBWlnUghOI)
+
+* [Blog CLI with ActiveRecord and Associations](https://www.youtube.com/watch?v=ZfJ1rqFcNFU)
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/activerecord-associations-intro'>ActiveRecord Associations</a> on Learn.co and start learning to code for free.</p>
