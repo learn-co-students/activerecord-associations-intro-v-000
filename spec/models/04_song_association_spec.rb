@@ -11,7 +11,7 @@ describe 'Song Associations' do
     @song.save
 
     expect(Song.find_by(name: "Forever").genre).to eq(genre)
-  end
+ end
 
   it 'can have an artist' do
     artist = Artist.create(name: "Prince")
