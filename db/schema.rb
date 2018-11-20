@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 4) do
 
-  create_table "artist", force: :cascade do |t|
+  create_table "artists", force: :cascade do |t|
     t.string "name"
   end
 
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 4) do
   create_table "songs", force: :cascade do |t|
     t.string "name"
     t.integer "artist_id"
-    t.integer "genere_id"
+    t.integer "genre_id"
   end
 
 end
